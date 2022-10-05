@@ -1,0 +1,34 @@
+{
+    "name": "escolalms/files",
+    "description": "Escola file repository API.",
+    "type": "package",
+    "require": {
+        "php": ">=7.4",
+        "laravel/framework": ">=8.0",
+        "escolalms/core": "^1",
+        "escolalms/auth": "^0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0",
+        "orchestra/testbench": ">=5.0"
+    },
+    "license": "MIT",
+    "authors": [{
+        "name": "Mariusz Gliwiński",
+        "email": "mariusz.gliwinski@escola.pl"
+    }],
+    "autoload": {
+        "psr-4": {
+            "EscolaLms\\Files\\": "src",
+            "EscolaLms\\Files\\Tests\\": "tests",
+            "EscolaLms\\Files\\Database\\Seeders\\": "database/seeders"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "EscolaLms\\Files\\EscolaLmsFilesServiceProvider"
+            ]
+        }
+    }
+}

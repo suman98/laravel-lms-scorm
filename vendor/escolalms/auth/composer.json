@@ -1,0 +1,61 @@
+{
+  "name": "escolalms/auth",
+  "description": "Escola Headless LMS Authorization",
+  "type": "package",
+  "require": {
+    "php": ">=7.4 | >=8.0",
+    "laravel/framework": ">=8.0",
+    "escolalms/core": ">=0.1.6",
+    "escolalms/categories": ">=0.1",
+    "laravel/socialite": "^5.1",
+    "doctrine/dbal": "^2|^3",
+    "escolalms/files": "^0",
+    "escolalms/model-fields": "^0"
+  },
+  "require-dev": {
+    "maatwebsite/excel": "^3.1",
+    "phpunit/phpunit": "^9.0",
+    "orchestra/testbench": ">=5.0",
+    "escolalms/settings": "^0.1.3",
+    "escolalms/notifications": "^0"
+  },
+  "suggest": {
+    "maatwebsite/excel": "^3.1",
+    "escolalms/settings": "^0.1.3"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Marcin Lenkowski",
+      "email": "marcin.lenkowski@escola.pl"
+    },
+    {
+      "name": "Mateusz Wojczal",
+      "email": "mateusz.wojczal@escola.pl"
+    },
+    {
+      "name": "Paweł Chołaj",
+      "email": "pawel.cholaj@escola.pl"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "EscolaLms\\Auth\\": "src",
+      "EscolaLms\\Auth\\Tests\\": "tests",
+      "Database\\Factories\\EscolaLms\\Auth\\Models\\": "database/factories",
+      "EscolaLms\\Auth\\Database\\Seeders\\": "database/seeders"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "EscolaLms\\Auth\\EscolaLmsAuthServiceProvider"
+      ]
+    }
+  },
+  "scripts": {
+    "post-autoload-dump": [
+      "@php ./vendor/bin/testbench package:discover --ansi"
+    ]
+  }
+}

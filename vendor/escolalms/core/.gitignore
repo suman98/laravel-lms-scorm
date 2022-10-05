@@ -1,0 +1,10 @@
+/vendor
+.phpunit.result.cache
+composer.lock
+/docker
+.phpunit.cache
+coverage.xml
+openapi.yaml
+openapi.json
+.env
+.idea

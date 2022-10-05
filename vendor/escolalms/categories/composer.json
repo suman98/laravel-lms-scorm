@@ -1,0 +1,37 @@
+{
+  "name": "escolalms/categories",
+  "description": "Escola Headless LMS Categories",
+  "type": "package",
+  "require": {
+    "php": ">=7.4",
+    "laravel/framework": ">=8.0",
+    "escolalms/core": ">=0.1",
+    "escolalms/files": "^0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.0",
+    "orchestra/testbench": "^6.0"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Marcin Lenkowski",
+      "email": "marcin.lenkowski@escola.pl"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "EscolaLms\\Categories\\": "src",
+      "EscolaLms\\Categories\\Tests\\": "tests",
+      "Database\\Factories\\EscolaLms\\Categories\\Models\\": "database/factories",
+      "EscolaLms\\Categories\\Database\\Seeders\\": "database/seeders"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "EscolaLms\\Categories\\EscolaLmsCategoriesServiceProvider"
+      ]
+    }
+  }
+}
